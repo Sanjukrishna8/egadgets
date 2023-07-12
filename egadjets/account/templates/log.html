@@ -1,0 +1,15 @@
+{% extends 'indexa.html' %}
+{% block base %}
+      <h1>Egadjets</h1>
+      <a href="{% url 'reg' %}">Register</a>
+      <form action="" method="post">
+        {%csrf_token%}
+        <table class="table">
+            {{form.as_table}}
+        </table>
+        <div>
+            <button class="btb btb-success">Login</button>
+        </div>
+
+      </form>
+{%endblock base%}
